@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { MessageCircle } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { MotionReveal } from "@/components/sections/MotionReveal";
 import { PageHero } from "@/components/sections/PageHero";
@@ -52,6 +52,13 @@ export default function ContactPage() {
               >
                 <MessageCircle size={16} />
                 Discuss on WhatsApp
+              </a>
+              <a
+                href={`mailto:${contactChannels.email}`}
+                className="mt-3 inline-flex items-center gap-2 rounded-full border border-[#07101e]/10 bg-white px-5 py-3 text-sm font-black text-[#07101e] shadow-panel transition hover:-translate-y-0.5 hover:border-[#0f766e]/25"
+              >
+                <Mail size={16} />
+                {contactChannels.email}
               </a>
               <div className="mt-6">
                 <p className="text-xs font-black uppercase tracking-[0.18em] text-graphite">Official social channels</p>

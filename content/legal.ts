@@ -50,21 +50,25 @@ export const legalPages: LegalPage[] = [
         body: "The platform architecture focuses on responsible operational handling, governance visibility, structured continuity workflows, and privacy-oriented coordination systems."
       },
       {
-        title: "Information Categories",
-        body: "The platform may organize information categories that support continuity workflows and operational coordination.",
-        bullets: ["User profile information", "Continuity-related records", "Operational workflow data", "Governance visibility logs", "Coordination-related information"]
+        title: "Information Collected",
+        body: "The platform may collect and organize information categories that support continuity workflows and operational coordination.",
+        bullets: ["Identity information", "Nominee information", "Uploaded records/documents", "Continuity instructions", "Communication records"]
       },
       {
-        title: "Operational Security Awareness",
-        body: "The platform is being designed with awareness toward encryption-oriented systems, access controls, operational monitoring, and governance visibility."
+        title: "Purpose of Collection",
+        body: "Information is intended to support continuity planning, access coordination, verification workflows, emergency communication, and platform operations."
       },
       {
-        title: "Data Usage Principles",
-        body: "Information is intended to support platform continuity workflows, operational coordination, governance visibility, and continuity-oriented user experience."
+        title: "Storage & Security",
+        body: "The platform is being designed with encrypted systems, restricted role-based access, audit logging, operational safeguards, and controlled infrastructure access."
       },
       {
-        title: "User Rights & Visibility",
-        body: "Users may request operational clarification regarding continuity-related information visibility and governance-oriented workflow handling."
+        title: "User Rights",
+        body: "Users may request correction, deletion, consent withdrawal, or information export through official communication channels."
+      },
+      {
+        title: "Incident Response",
+        body: "In case of suspected unauthorized access or data incidents, users may be notified through official communication channels."
       }
     ]
   },
@@ -86,6 +90,14 @@ export const legalPages: LegalPage[] = [
       {
         title: "Workflow Verification Awareness",
         body: "Certain continuity-oriented workflows may involve structured review visibility and governance-oriented operational handling."
+      },
+      {
+        title: "User Responsibility For Uploaded Information",
+        body: "Users remain fully responsible for the legality, authenticity, ownership, and validity of uploaded information, instructions, and records."
+      },
+      {
+        title: "Platform Validation Boundary",
+        body: "INHERIX operates as a continuity facilitation platform and does not independently validate legal ownership, inheritance entitlement, succession claims, or statutory authority unless explicitly stated."
       },
       {
         title: "Communication Consent",
@@ -132,6 +144,14 @@ export const legalPages: LegalPage[] = [
       {
         title: "INHERIX Does Not Independently",
         body: "INHERIX does not independently determine legal ownership, validate inheritance claims, execute legal succession decisions, provide judicial rulings, determine entitlement outcomes, or replace legal, financial, or regulatory advice."
+      },
+      {
+        title: "Legal Process Boundary",
+        body: "INHERIX does not replace wills, courts, succession certificates, probate processes, banking nomination systems, statutory legal procedures, or government authorities."
+      },
+      {
+        title: "Independent Advice",
+        body: "Users are encouraged to seek independent legal, tax, financial, or professional advice wherever required."
       },
       {
         title: "Platform Positioning",

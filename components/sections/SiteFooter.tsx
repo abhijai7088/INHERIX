@@ -6,6 +6,7 @@ import { contactChannels } from "@/content/contactChannels";
 import { SocialLinks } from "@/components/sections/SocialLinks";
 
 const productLinks = [
+  { href: "/about", label: "About INHERIX" },
   { href: "/how-it-works", label: "How It Works" },
   { href: "/digital-vault", label: "Digital Vault" },
   { href: "/family-access-system", label: "Family Access System" },
@@ -20,7 +21,9 @@ const legalLinks = [
   { href: "/consent-policy", label: "Consent Policy" },
   { href: "/data-access-policy", label: "Data Access Policy" },
   { href: "/legal-disclaimer", label: "Legal Disclaimer" },
-  { href: "/grievance", label: "Grievance" }
+  { href: "/grievance", label: "Grievance" },
+  { href: "/contact", label: "Contact" },
+  { href: "/operational-principles", label: "Operational Principles" }
 ];
 
 const trustBadges = [
@@ -36,13 +39,14 @@ export function SiteFooter() {
     <footer className="relative overflow-hidden border-t border-white/10 bg-[#050816] text-white">
       <div className="pointer-events-none absolute inset-0 premium-grid-dark opacity-32" />
       <div className="pointer-events-none absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d8c99b]/45 to-transparent" />
-      <div className="pointer-events-none absolute left-1/4 top-0 h-56 w-56 rounded-full bg-[#12375f]/18 blur-3xl" />
-      <div className="pointer-events-none absolute right-1/4 top-0 h-56 w-56 rounded-full bg-[#14b8a6]/10 blur-3xl" />
 
       <Container className="relative py-10 sm:py-12">
         <div className="mb-8 rounded-2xl border border-white/10 bg-white/[0.05] px-5 py-3 backdrop-blur">
           <p className="text-xs font-black uppercase tracking-[0.22em] text-[#d8c99b]">
             Building India&apos;s Digital Continuity Infrastructure.
+          </p>
+          <p className="mt-2 text-xs font-semibold leading-5 text-white/56">
+            Trademark Applied™. Platform currently in controlled preview stage.
           </p>
         </div>
 
@@ -156,10 +160,10 @@ export function SiteFooter() {
 
         <div className="mt-5 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
           <p className="text-xs text-white/44">
-            &copy; 2026 INHERIX Digital Continuity Pvt. Ltd. All Rights Reserved.
+            &copy; INHERIX. Trademark Applied™.
           </p>
           <div className="flex flex-wrap items-center gap-3">
-            {["DPDP Act Aware", "IT Act 2000", "Website Preview Only"].map((badge) => (
+            {["DPDP Act Aware", "IT Act 2000", "Controlled Preview Stage"].map((badge) => (
               <span key={badge} className="rounded-full border border-white/12 bg-white/[0.06] px-3 py-1 text-xs font-medium text-white/58">
                 {badge}
               </span>
@@ -168,7 +172,7 @@ export function SiteFooter() {
         </div>
 
         <p className="mt-4 rounded-xl border border-white/8 bg-black/12 px-4 py-3 text-[0.7rem] leading-5 text-white/42">
-          INHERIX is a digital continuity and controlled access platform. It does not provide legal, financial, tax, or inheritance advice.
+          INHERIX is a digital continuity and controlled access platform currently in controlled preview stage. It does not provide legal, financial, tax, or inheritance advice.
         </p>
       </Container>
     </footer>

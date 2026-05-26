@@ -18,12 +18,12 @@ import {
 } from "lucide-react";
 
 const docCategories = [
-  { label: "Identity", count: 5, Icon: User, color: "bg-violet/10 text-violet" },
-  { label: "Property", count: 4, Icon: Home, color: "bg-teal/10 text-teal" },
-  { label: "Insurance", count: 3, Icon: Shield, color: "bg-amber/10 text-amber" },
-  { label: "Financial", count: 6, Icon: DollarSign, color: "bg-emerald/10 text-emerald" },
-  { label: "Legal", count: 2, Icon: Scale, color: "bg-violet/10 text-violet" },
-  { label: "Digital Notes", count: 2, Icon: Smartphone, color: "bg-teal/10 text-teal" },
+  { label: "Identity", count: 2, Icon: User, color: "bg-violet/10 text-violet" },
+  { label: "Property", count: 1, Icon: Home, color: "bg-teal/10 text-teal" },
+  { label: "Insurance", count: 1, Icon: Shield, color: "bg-amber/10 text-amber" },
+  { label: "Financial", count: 2, Icon: DollarSign, color: "bg-emerald/10 text-emerald" },
+  { label: "Legal", count: 1, Icon: Scale, color: "bg-violet/10 text-violet" },
+  { label: "Digital Notes", count: 1, Icon: Smartphone, color: "bg-teal/10 text-teal" },
   { label: "Family Notes", count: 1, Icon: Notebook, color: "bg-amber/10 text-amber" },
   { label: "Personal Msgs", count: 1, Icon: MessageSquare, color: "bg-rose/10 text-rose" }
 ];
@@ -38,9 +38,9 @@ const recentActivity = [
 export function ClientDashboard() {
   const metrics = [
     { label: "Nominees", value: "2", icon: Users, color: "bg-violet/10 text-violet" },
-    { label: "Documents", value: "24", icon: FileText, color: "bg-teal/10 text-teal" },
-    { label: "Instructions", value: "6", icon: ClipboardList, color: "bg-amber/10 text-amber" },
-    { label: "Pending Actions", value: "3", icon: AlertCircle, color: "bg-rose/10 text-rose" }
+    { label: "Documents", value: "10", icon: FileText, color: "bg-teal/10 text-teal" },
+    { label: "Instructions", value: "3", icon: ClipboardList, color: "bg-amber/10 text-amber" },
+    { label: "Pending Actions", value: "1", icon: AlertCircle, color: "bg-rose/10 text-rose" }
   ];
 
   return (
@@ -49,7 +49,7 @@ export function ClientDashboard() {
       <div className="flex items-center justify-between mb-5 px-1">
         <div>
           <h2 className="text-base font-semibold text-ink">Welcome, Vikram Sharma</h2>
-          <p className="text-xs text-graphite">Secure today. Protected tomorrow.</p>
+          <p className="text-xs text-graphite">Organized today. Structured for continuity.</p>
         </div>
         {/* Profile completion */}
         <div className="flex items-center gap-3">

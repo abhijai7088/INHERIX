@@ -4,6 +4,7 @@ export const navigation = [
   { label: "Family Access", href: "/family-access-system" },
   { label: "Security", href: "/security-compliance" },
   { label: "Dashboard Preview", href: "/dashboard-preview" },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" }
 ];
 
@@ -13,5 +14,6 @@ export const legalLinks = [
   { label: "Consent", href: "/consent-policy" },
   { label: "Data Access", href: "/data-access-policy" },
   { label: "Disclaimer", href: "/legal-disclaimer" },
-  { label: "Grievance", href: "/grievance" }
+  { label: "Grievance", href: "/grievance" },
+  { label: "Operational Principles", href: "/operational-principles" }
 ];

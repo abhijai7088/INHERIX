@@ -1,4 +1,4 @@
-import { Bell, ChevronDown, Search, ShieldCheck, LayoutDashboard, Users, FileText, BookOpen, ClipboardList, Bell as BellIcon, GitBranch, Package, Activity, HeadphonesIcon, Settings, LogOut } from "lucide-react";
+import { AlertTriangle, Bell, ChevronDown, Search, ShieldCheck, LayoutDashboard, Users, FileText, BookOpen, ClipboardList, Bell as BellIcon, GitBranch, Package, Activity, HeadphonesIcon, Settings, LogOut } from "lucide-react";
 import type { ReactNode } from "react";
 import Image from "next/image";
 
@@ -116,6 +116,13 @@ export function DashboardShell({ children, role, userName, userRole }: Dashboard
 
         {/* Main content */}
         <main className="bg-[#f7f9fc] p-5 sm:p-6 overflow-auto">
+          <div className="mb-4 flex items-start gap-3 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-amber-950 shadow-[0_10px_30px_rgba(120,53,15,0.06)]">
+            <AlertTriangle size={18} className="mt-0.5 shrink-0 text-amber-700" />
+            <p className="text-xs font-semibold leading-5">
+              Demonstration Preview Only. Data shown is illustrative and does not represent real client records.
+            </p>
+          </div>
+
           {/* Top bar */}
           <div className="flex items-center justify-between gap-4 mb-6">
             <div className="hidden sm:flex items-center gap-2.5 flex-1 max-w-sm rounded-2xl border border-line bg-white px-3 py-2.5 text-sm text-graphite shadow-panel">

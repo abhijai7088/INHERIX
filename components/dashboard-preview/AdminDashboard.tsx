@@ -25,12 +25,12 @@ const metricColors = [
 
 export function AdminDashboard() {
   const metrics = [
-    { label: "Total Clients", value: "128", delta: "+12%", up: true },
-    { label: "Active Clients", value: "96", delta: "+8%", up: true },
-    { label: "Nominees", value: "246", delta: "+15%", up: true },
-    { label: "Trigger Requests", value: "18", delta: "-5%", up: false },
-    { label: "Pending Releases", value: "14", delta: "-3%", up: false },
-    { label: "Support Tickets", value: "21", delta: "+10%", up: true }
+    { label: "Total Clients", value: "18", delta: "+2", up: true },
+    { label: "Active Clients", value: "11", delta: "+1", up: true },
+    { label: "Nominees", value: "24", delta: "+3", up: true },
+    { label: "Trigger Requests", value: "3", delta: "Review", up: false },
+    { label: "Pending Releases", value: "1", delta: "Controlled", up: false },
+    { label: "Support Tickets", value: "2", delta: "Open", up: true }
   ];
 
   const recentRequests = [
@@ -51,10 +51,10 @@ export function AdminDashboard() {
 
   // Donut chart segments (CSS)
   const donutColors = [
-    { pct: 75, color: "#19b6a2", label: "Active", count: 96 },
-    { pct: 14, color: "#f6c85f", label: "Pending", count: 18 },
-    { pct: 6, color: "#635bff", label: "Suspended", count: 8 },
-    { pct: 5, color: "#ef476f", label: "Closed", count: 6 }
+    { pct: 61, color: "#19b6a2", label: "Active", count: 11 },
+    { pct: 22, color: "#f6c85f", label: "Pending", count: 4 },
+    { pct: 11, color: "#635bff", label: "On Hold", count: 2 },
+    { pct: 6, color: "#ef476f", label: "Closed", count: 1 }
   ];
 
   // Build conic-gradient for donut
@@ -98,7 +98,7 @@ export function AdminDashboard() {
               <p className="mt-1 text-xl font-bold text-ink">{m.value}</p>
               <p className={`mt-1 flex items-center gap-0.5 text-[0.65rem] font-semibold ${m.up ? "text-emerald" : "text-rose"}`}>
                 {m.up ? <TrendingUp size={11} /> : <TrendingDown size={11} />}
-                {m.delta} from last month
+                {m.delta}
               </p>
             </div>
           );
@@ -120,7 +120,7 @@ export function AdminDashboard() {
               style={{ background: donutGradient }}
             >
               <div className="absolute inset-[18%] rounded-full bg-white flex flex-col items-center justify-center">
-                <span className="text-xl font-bold text-ink">128</span>
+                <span className="text-xl font-bold text-ink">18</span>
                 <span className="text-[0.6rem] text-graphite">Total</span>
               </div>
             </div>

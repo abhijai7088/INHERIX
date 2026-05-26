@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { ShieldCheck } from "lucide-react";
+import { contactChannels } from "@/content/contactChannels";
 import { createMetadata } from "@/lib/seo";
 import { TrustAndCta } from "@/components/sections/TrustAndCta";
 
@@ -31,47 +32,44 @@ export default function PrivacyPolicyPage() {
       <section className="py-20">
         <Container className="max-w-4xl">
           <div className="prose prose-slate prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-h2:text-2xl prose-h2:text-ink prose-p:text-graphite prose-li:text-graphite">
-            <h2>Information Handling Philosophy</h2>
-            <p>The platform architecture focuses on:</p>
+            <h2>Information Collected</h2>
+            <p>INHERIX may collect and organize information categories that support continuity workflows and operational coordination.</p>
             <ul>
-              <li>Responsible operational handling</li>
-              <li>Governance visibility</li>
-              <li>Structured continuity workflows</li>
-              <li>Privacy-oriented coordination systems</li>
+              <li>Identity information</li>
+              <li>Nominee information</li>
+              <li>Uploaded records/documents</li>
+              <li>Continuity instructions</li>
+              <li>Communication records</li>
             </ul>
 
-            <h2>Information Categories</h2>
-            <p>May include:</p>
-            <ul>
-              <li>User profile information</li>
-              <li>Continuity-related records</li>
-              <li>Operational workflow data</li>
-              <li>Governance visibility logs</li>
-              <li>Coordination-related information</li>
-            </ul>
-
-            <h2>Operational Security Awareness</h2>
-            <p>The platform is being designed with awareness toward:</p>
-            <ul>
-              <li>Encryption-oriented systems</li>
-              <li>Access controls</li>
-              <li>Operational monitoring</li>
-              <li>Governance-oriented visibility</li>
-            </ul>
-
-            <h2>Data Usage Principles</h2>
+            <h2>Purpose of Collection</h2>
             <p>Information is intended to support:</p>
             <ul>
-              <li>Platform continuity workflows</li>
-              <li>Operational coordination</li>
-              <li>Governance visibility</li>
-              <li>Continuity-oriented user experience</li>
+              <li>Continuity planning</li>
+              <li>Access coordination</li>
+              <li>Verification workflows</li>
+              <li>Emergency communication</li>
+              <li>Platform operations</li>
             </ul>
 
-            <h2>User Rights & Visibility</h2>
-            <p>
-              Users may request operational clarification regarding continuity-related information visibility and governance-oriented workflow handling.
-            </p>
+            <h2>Storage & Security</h2>
+            <p>The platform is being designed with:</p>
+            <ul>
+              <li>Encrypted systems</li>
+              <li>Restricted role-based access</li>
+              <li>Audit logging</li>
+              <li>Operational safeguards</li>
+              <li>Controlled infrastructure access</li>
+            </ul>
+
+            <h2>User Rights</h2>
+            <p>Users may request correction, deletion, consent withdrawal, or information export through official communication channels.</p>
+
+            <h2>Incident Response</h2>
+            <p>In case of suspected unauthorized access or data incidents, users may be notified through official communication channels.</p>
+
+            <h2>Official Communication</h2>
+            <p>For privacy-related communication, users may contact <a href={`mailto:${contactChannels.email}`}>{contactChannels.email}</a>.</p>
           </div>
         </Container>
       </section>

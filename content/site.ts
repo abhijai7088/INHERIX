@@ -26,15 +26,15 @@ export const homePage = {
       "INHERIX helps families organize critical digital information through structured continuity planning, trusted coordination, and governance-oriented workflows."
   },
   hero: {
-    seoH1: "Secure What Matters Most For Your Family",
-    title: "Secure What Matters Most For Your Family",
+    seoH1: "Organize What Matters Most For Your Family",
+    title: "Organize What Matters Most For Your Family",
     titleGradient: "Matters Most",
-    trustLine: "INHERIX protects continuity across generations.",
+    trustLine: "INHERIX is being built as responsible continuity infrastructure for modern families.",
     positioning: "Institutional Digital Continuity Framework",
     intro:
       "INHERIX helps families organize critical digital information, define trusted continuity relationships, and manage controlled access through verification-oriented governance workflows.",
     supporting:
-      "Demo Preview Only — Features and workflows subject to final release architecture.",
+      "Demonstration Preview Only. Data shown is illustrative and does not represent real client records.",
     primary: "Request Early Access",
     secondary: "Schedule Professional Consultation"
   },
@@ -104,20 +104,26 @@ export const homePage = {
     { title: "No public document exposure", text: "The product narrative avoids unrestricted or public information visibility." }
   ],
   security: [
-    { title: "AES-256 Ready Storage", text: "A protected storage model positioned for strong encryption patterns around sensitive continuity information." },
+    { title: "Encrypted Systems", text: "A protected storage model positioned around encrypted systems for sensitive continuity information." },
     { title: "Verification Layer", text: "Controlled, proof-based review language for nominee requests and sensitive workflow handling." },
-    { title: "Access Control", text: "Selective access management framed through client, nominee, and admin role boundaries." },
-    { title: "Audit Trail", text: "Activity and request history designed to make every access workflow traceable in the product preview." },
-    { title: "Data Lifecycle Controls", text: "Information handling is positioned around operational maturity, retention awareness, and responsible controls." },
-    { title: "Compliance Awareness", text: "Indian data protection and IT law awareness is referenced without making legal compliance guarantees." }
+    { title: "Layered Permissions", text: "Selective access management framed through client, nominee, and admin role boundaries." },
+    { title: "Audit Visibility", text: "Activity and request history designed to make workflow events visible in the product preview." },
+    { title: "Operational Safeguards", text: "Information handling is positioned around operational maturity, retention awareness, and responsible controls." },
+    { title: "Infrastructure Monitoring", text: "Indian data protection and IT law awareness is referenced without making legal compliance guarantees." }
   ],
   founder: {
     title: "Why INHERIX Exists",
     text:
-      "Families lose access to critical information because records become fragmented, instructions remain personal, and continuity coordination becomes difficult during sensitive situations. INHERIX is being built to solve this responsibly.",
+      "Digital asset loss is increasing globally, families often lack continuity access, and emergency information remains fragmented across devices, platforms, and memory. INHERIX is being built to help modern families organize continuity with responsibility, ethics, and long-term structure.",
     quote:
       "At INHERIX, our vision is to build a trusted continuity institution for the digital age - designed around responsibility, privacy, governance, and family continuity.",
     attribution: "Amit Tyagi, Founder, INHERIX"
+  },
+  professionalNetwork: {
+    title: "A Future Professional Network For Responsible Continuity.",
+    text:
+      "INHERIX is positioned to collaborate with professional ecosystems that already support family trust, financial clarity, and continuity planning.",
+    categories: ["Chartered Accountants", "Advocates", "Wealth Advisors", "Insurance Advisors", "Family Offices", "Digital Executors"]
   },
   future: {
     title: "The future of family continuity will be structured, governed, and trusted.",
@@ -125,12 +131,12 @@ export const homePage = {
       "As families become more digitally dependent, continuity planning requires more than scattered records. INHERIX is being developed to support long-term continuity readiness through structured information organization, trusted coordination, and governance-oriented workflows."
   },
   finalCta: {
-    title: "Secure your family's continuity with confidence.",
+    title: "Build your family's continuity structure with confidence.",
     text:
       "Start building a structured continuity system with trust, privacy, governance, and operational clarity at its core.",
     primary: "Request Early Access",
     secondary: "Schedule Professional Consultation",
-    disclaimer: "Demo Preview Only — Features and workflows subject to final release architecture."
+    disclaimer: "Demonstration Preview Only. Data shown is illustrative and does not represent real client records."
   },
   trust: [
     { title: "Structured for clarity", text: "Operational systems for organizing sensitive continuity-related information.", icon: "Layers3" },

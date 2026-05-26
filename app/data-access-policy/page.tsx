@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { ShieldCheck } from "lucide-react";
+import { contactChannels } from "@/content/contactChannels";
 import { createMetadata } from "@/lib/seo";
 import { TrustAndCta } from "@/components/sections/TrustAndCta";
 
@@ -58,6 +59,9 @@ export default function DataAccessPolicyPage() {
             <p>
               INHERIX does not sell operational continuity information or provide unrestricted third-party visibility access.
             </p>
+
+            <h2>Official Communication</h2>
+            <p>For data-access communication, users may contact <a href={`mailto:${contactChannels.email}`}>{contactChannels.email}</a>.</p>
           </div>
         </Container>
       </section>

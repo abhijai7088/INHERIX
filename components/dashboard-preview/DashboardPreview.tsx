@@ -52,14 +52,14 @@ const features = [
   { label: "Emergency Requests", icon: TimerReset, color: "text-[#b45309]" },
   { label: "Timeline Activity", icon: Activity, color: "text-[#6366f1]" },
   { label: "Digital Vault", icon: FileLock2, color: "text-[#14b8a6]" },
-  { label: "Secure Access Granted", icon: CheckCircle2, color: "text-[#3b82f6]" }
+  { label: "Controlled Access", icon: CheckCircle2, color: "text-[#3b82f6]" }
 ];
 
 const proofMetrics = [
-  { label: "Assets Stored", value: 154, suffix: "", detail: "structured demo assets" },
-  { label: "Nominees", value: 3, suffix: "", detail: "trusted roles mapped" },
+  { label: "Assets Stored", value: 18, suffix: "", detail: "structured demo assets" },
+  { label: "Nominees", value: 2, suffix: "", detail: "trusted roles mapped" },
   { label: "Pending Requests", value: 1, suffix: "", detail: "awaiting review" },
-  { label: "Security Status", value: 100, suffix: "%", detail: "Protected" }
+  { label: "Security Posture", value: 0, suffix: "", detail: "illustrative safeguards" }
 ];
 
 const sampleFlow = [
@@ -68,7 +68,7 @@ const sampleFlow = [
   "Insurance (+3)",
   "Nominee Request Received",
   "Admin Verification",
-  "Secure Access Granted"
+  "Controlled Access"
 ];
 
 export function DashboardPreview() {
@@ -115,15 +115,15 @@ export function DashboardPreview() {
             <div key={metric.label} className="rounded-[1.45rem] border border-white/80 bg-white/82 p-5 shadow-panel">
               <p className="text-[0.68rem] font-black uppercase tracking-[0.14em] text-graphite/70">{metric.label}</p>
               <p className="mt-3 text-3xl font-black text-ink">
-                {metric.label === "Security Status" ? (
-                  "Protected"
+                {metric.label === "Security Posture" ? (
+                  "Preview"
                 ) : (
                   <AnimatedCounter target={metric.value} suffix={metric.suffix} duration={1400} />
                 )}
               </p>
               <div className="mt-4 h-2 overflow-hidden rounded-full bg-slate-100">
                 <div
-                  style={{ width: metric.label === "Pending Requests" ? "38%" : "100%" }}
+                  style={{ width: metric.label === "Pending Requests" ? "38%" : metric.label === "Security Posture" ? "72%" : "64%" }}
                   className="h-full origin-left rounded-full bg-gradient-to-r from-[#6366f1] via-[#3b82f6] to-[#14b8a6]"
                 />
               </div>
@@ -180,7 +180,7 @@ export function DashboardPreview() {
             </motion.div>
           </AnimatePresence>
           <div className="pointer-events-none absolute bottom-5 left-1/2 z-20 w-[calc(100%-2.5rem)] max-w-3xl -translate-x-1/2 rounded-full border border-white/15 bg-[#07101e]/82 px-4 py-2 text-center text-[0.68rem] font-semibold text-white/62 shadow-[0_18px_42px_rgba(0,0,0,0.22)] backdrop-blur">
-            Demo Preview Only — Features and workflows subject to final release architecture.
+            Demonstration Preview Only. Data shown is illustrative and does not represent real client records.
           </div>
         </div>
 
@@ -190,7 +190,7 @@ export function DashboardPreview() {
             <Sparkles size={16} className="text-[#14b8a6]" />
             <p className="text-sm font-medium text-graphite">
               <span className="font-bold text-ink">Demo Preview Only.</span>{" "}
-              Features and workflows subject to final release architecture. All data is sample/placeholder.
+              Data shown is illustrative and does not represent real client records.
             </p>
           </div>
           <Link

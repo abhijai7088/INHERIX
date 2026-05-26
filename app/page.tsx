@@ -15,6 +15,7 @@ import {
   Landmark,
   Layers3,
   LockKeyhole,
+  Network,
   Scale,
   ShieldCheck,
   UserCheck,
@@ -39,6 +40,7 @@ const workflowIcons = [UserCheck, UsersRound, Fingerprint, Scale, KeyRound];
 const roleIcons = [UsersRound, UserCheck, Landmark, ShieldCheck];
 const governanceIcons = [BadgeCheck, LockKeyhole, Activity, UsersRound, Fingerprint, Eye];
 const securityIcons = [ShieldCheck, Building2, LockKeyhole, Activity, Layers3, Scale];
+const professionalNetworkIcons = [Landmark, Scale, BadgeCheck, ShieldCheck, Building2, Network];
 
 function DemoDisclaimer({ className = "" }: { className?: string }) {
   return (
@@ -88,7 +90,7 @@ export default function HomePage() {
             </div>
 
             <h1 className="mt-6 max-w-5xl text-[2.75rem] font-extrabold leading-[1.02] text-white sm:text-[3.35rem] lg:text-[3.65rem] xl:text-[4.05rem]">
-              <span className="animate-fade-up block [animation-delay:120ms] [animation-fill-mode:both]">Secure What</span>
+              <span className="animate-fade-up block [animation-delay:120ms] [animation-fill-mode:both]">Organize What</span>
               <span className="animate-fade-up block text-gradient-hero [animation-delay:220ms] [animation-fill-mode:both]">Matters Most</span>
               <span className="animate-fade-up block [animation-delay:320ms] [animation-fill-mode:both]">For Your Family</span>
             </h1>
@@ -105,7 +107,7 @@ export default function HomePage() {
               <div className="hero-security-badges">
                 <div className="hero-security-badge">
                   <span className="hero-security-dot" />
-                  AES-256 Ready
+                  Encrypted Systems
                 </div>
                 <div className="hero-security-badge">
                   <span className="hero-security-dot" />
@@ -139,7 +141,7 @@ export default function HomePage() {
                 </div>
                 <div className="hero-live-badge">
                   <span className="hero-live-dot" />
-                  Live Preview
+                  Demo Preview
                 </div>
               </div>
 
@@ -147,18 +149,18 @@ export default function HomePage() {
               <div className="hero-stats-grid">
                 <div className="hero-stat-cell">
                   <div className="hero-stat-label">Documents</div>
-                  <div className="hero-stat-value">3,842</div>
-                  <div className="hero-stat-change positive">+6% active</div>
+                  <div className="hero-stat-value">16</div>
+                  <div className="hero-stat-change positive">Illustrative</div>
                 </div>
                 <div className="hero-stat-cell">
                   <div className="hero-stat-label">Nominees</div>
-                  <div className="hero-stat-value">512</div>
-                  <div className="hero-stat-change positive">+18 verified</div>
+                  <div className="hero-stat-value">4</div>
+                  <div className="hero-stat-change positive">Mapped roles</div>
                 </div>
                 <div className="hero-stat-cell">
                   <div className="hero-stat-label">Requests</div>
-                  <div className="hero-stat-value">27</div>
-                  <div className="hero-stat-change warning">3 pending</div>
+                  <div className="hero-stat-value">2</div>
+                  <div className="hero-stat-change warning">1 pending</div>
                 </div>
               </div>
 
@@ -615,7 +617,37 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 11. Future of Digital Continuity */}
+      {/* 11. Future Professional Network */}
+      <section className="relative overflow-hidden bg-[#f4f6f8] py-20 sm:py-28">
+        <div className="absolute inset-0 premium-grid opacity-55" />
+        <Container className="relative z-10">
+          <MotionReveal>
+            <div className="mx-auto max-w-3xl text-center">
+              <Badge tone="amber">Professional network</Badge>
+              <h2 className="mt-5 text-4xl font-extrabold leading-[1.08] text-ink sm:text-5xl">{homePage.professionalNetwork.title}</h2>
+              <p className="mt-6 text-lg leading-8 text-graphite">{homePage.professionalNetwork.text}</p>
+            </div>
+          </MotionReveal>
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {homePage.professionalNetwork.categories.map((category, index) => {
+              const Icon = professionalNetworkIcons[index] ?? Building2;
+              return (
+                <MotionReveal key={category} delay={index * 0.04}>
+                  <div className="h-full rounded-2xl border border-line bg-white p-5 shadow-panel">
+                    <Icon size={20} className="text-[#0b78b6]" />
+                    <h3 className="mt-4 text-lg font-black text-ink">{category}</h3>
+                    <p className="mt-2 text-sm leading-7 text-graphite">
+                      Future collaboration category for continuity planning, documentation context, and responsible family coordination.
+                    </p>
+                  </div>
+                </MotionReveal>
+              );
+            })}
+          </div>
+        </Container>
+      </section>
+
+      {/* 12. Future of Digital Continuity */}
       <section className="relative overflow-hidden bg-[#0a1624] py-20 text-white sm:py-28">
         <div className="absolute inset-0 premium-grid-dark opacity-18" />
         <Container className="relative z-10">
@@ -629,7 +661,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 12. Premium CTA */}
+      {/* 13. Premium CTA */}
       <section className="relative overflow-hidden bg-[#050816] py-28 text-white sm:py-36">
         <div className="absolute inset-0 premium-grid-dark opacity-20" />
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/12 to-transparent" />

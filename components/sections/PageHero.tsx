@@ -160,10 +160,10 @@ function WorkflowHero() {
 
 function VaultHero() {
   const records = [
-    ["Identity", "8 refs", FileLock2],
-    ["Property", "5 files", Landmark],
-    ["Insurance", "4 docs", ShieldCheck],
-    ["Financial", "7 notes", KeyRound]
+    ["Identity", "2 refs", FileLock2],
+    ["Property", "1 file", Landmark],
+    ["Insurance", "1 doc", ShieldCheck],
+    ["Financial", "2 notes", KeyRound]
   ];
   return (
     <HeroPanel>
@@ -287,22 +287,27 @@ function EmergencyHero() {
 }
 
 function SecurityHero() {
-  const controls = ["RBAC awareness", "Audit visibility", "Consent logs", "No public access"];
+  const controls = [
+    { label: "RBAC awareness", state: "Configured", width: "62%" },
+    { label: "Audit visibility", state: "Enabled", width: "58%" },
+    { label: "Consent logs", state: "Active", width: "66%" },
+    { label: "No public access", state: "Restricted", width: "72%" }
+  ];
   return (
     <HeroPanel>
       <VisualTitle eyebrow="Trust architecture" title="Governance control plane" icon={<LockKeyhole size={20} />} />
       <div className="relative mt-8 grid gap-4">
         {controls.map((control, index) => (
-          <div key={control} className="security-row rounded-2xl border border-white/10 bg-white/5 p-4" style={{ animationDelay: `${index * 0.16}s` }}>
+          <div key={control.label} className="security-row rounded-2xl border border-white/10 bg-white/5 p-4" style={{ animationDelay: `${index * 0.16}s` }}>
             <div className="flex items-center justify-between">
               <p className="flex items-center gap-2 text-sm font-bold text-white">
                 <Fingerprint size={16} className="text-[#5bd7ff] security-fingerprint" />
-                {control}
+                {control.label}
               </p>
-              <p className="text-xs font-black text-[#5bd7ff]">{86 + index * 4}%</p>
+              <p className="text-xs font-black text-[#5bd7ff]">{control.state}</p>
             </div>
             <div className="mt-3 h-2 rounded-full bg-white/10">
-              <div className="security-meter h-2 rounded-full bg-gradient-to-r from-violet to-teal" style={{ width: `${74 + index * 6}%`, animationDelay: `${index * 0.18}s` }} />
+              <div className="security-meter h-2 rounded-full bg-gradient-to-r from-violet to-teal" style={{ width: control.width, animationDelay: `${index * 0.18}s` }} />
             </div>
           </div>
         ))}
@@ -313,9 +318,9 @@ function SecurityHero() {
 
 function DashboardHero() {
   const roles = [
-    { label: "Admin", value: "27", detail: "pending requests", Icon: ShieldCheck },
-    { label: "Client", value: "24", detail: "records mapped", Icon: UsersRound },
-    { label: "Nominee", value: "7", detail: "released items", Icon: KeyRound }
+    { label: "Admin", value: "3", detail: "pending requests", Icon: ShieldCheck },
+    { label: "Client", value: "10", detail: "records mapped", Icon: UsersRound },
+    { label: "Nominee", value: "2", detail: "released items", Icon: KeyRound }
   ];
 
   return (

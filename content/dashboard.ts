@@ -31,12 +31,12 @@ export const adminDashboard = {
   subtitle: "Operational visibility across clients, nominees, proof review, and controlled release statuses.",
   nav: ["Dashboard", "Clients", "Nominees", "Documents", "Instructions", "Consent Logs", "Trigger Requests", "Release Records", "Audit Logs"],
   metrics: [
-    { label: "Total Clients", value: "128", change: "+12%", icon: UsersRound },
-    { label: "Active Clients", value: "96", change: "+8%", icon: CheckCircle2 },
-    { label: "Nominees", value: "246", change: "+15%", icon: UserPlus },
-    { label: "Trigger Requests", value: "18", change: "Review", icon: ClipboardList },
-    { label: "Pending Releases", value: "14", change: "Controlled", icon: FolderLock },
-    { label: "Support Tickets", value: "21", change: "+10%", icon: MessageSquare }
+    { label: "Total Clients", value: "18", change: "+2", icon: UsersRound },
+    { label: "Active Clients", value: "11", change: "+1", icon: CheckCircle2 },
+    { label: "Nominees", value: "24", change: "+3", icon: UserPlus },
+    { label: "Trigger Requests", value: "3", change: "Review", icon: ClipboardList },
+    { label: "Pending Releases", value: "1", change: "Controlled", icon: FolderLock },
+    { label: "Support Tickets", value: "2", change: "Open", icon: MessageSquare }
   ],
   requests: [
     { name: "Rajesh Sharma", detail: "Client: Vikram Sharma", status: "Under Review" },
@@ -52,16 +52,16 @@ export const clientDashboard = {
   nav: ["Dashboard", "My Profile", "Nominees", "Documents", "Instructions", "Consent", "Activity & Logs", "Support"],
   metrics: [
     { label: "Profile Completion", value: "80%", icon: ShieldCheck },
-    { label: "Documents", value: "24", icon: FileText },
+    { label: "Documents", value: "10", icon: FileText },
     { label: "Nominees", value: "2", icon: UsersRound },
-    { label: "Pending Actions", value: "3", icon: Bell }
+    { label: "Pending Actions", value: "1", icon: Bell }
   ],
   categories: [
-    { label: "Identity", count: "5 Documents", icon: FileCheck2 },
-    { label: "Property", count: "4 Documents", icon: Home },
-    { label: "Insurance", count: "3 Documents", icon: ShieldCheck },
-    { label: "Financial", count: "6 Documents", icon: KeyRound },
-    { label: "Legal", count: "2 Documents", icon: ClipboardList },
+    { label: "Identity", count: "2 Documents", icon: FileCheck2 },
+    { label: "Property", count: "1 Document", icon: Home },
+    { label: "Insurance", count: "1 Document", icon: ShieldCheck },
+    { label: "Financial", count: "2 Documents", icon: KeyRound },
+    { label: "Legal", count: "1 Document", icon: ClipboardList },
     { label: "Family Notes", count: "1 Document", icon: MessageSquare }
   ],
   activity: ["Document uploaded: PAN Card.pdf", "Instruction updated: Family guidance", "Nominee added: Neha Sharma", "Consent completed: Instruction declaration"]
@@ -73,7 +73,7 @@ export const nomineeDashboard = {
   nav: ["Dashboard", "My Profile", "My Requests", "Released Items", "Support Tickets", "Activity & Logs", "Settings"],
   metrics: [
     { label: "Active Requests", value: "2", icon: ClipboardList },
-    { label: "Released Items", value: "7", icon: FolderLock },
+    { label: "Released Items", value: "2", icon: FolderLock },
     { label: "Pending Proofs", value: "1", icon: FileCheck2 },
     { label: "Support Tickets", value: "1", icon: MessageSquare }
   ],

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { ShieldCheck } from "lucide-react";
+import { contactChannels } from "@/content/contactChannels";
 import { createMetadata } from "@/lib/seo";
 import { TrustAndCta } from "@/components/sections/TrustAndCta";
 
@@ -54,10 +55,23 @@ export default function ConsentPolicyPage() {
               Certain continuity-oriented operational workflows may involve structured review visibility and governance-oriented operational handling.
             </p>
 
+            <h2>User Responsibility For Uploaded Information</h2>
+            <p>
+              Users remain fully responsible for the legality, authenticity, ownership, and validity of uploaded information, instructions, and records.
+            </p>
+
+            <h2>Platform Validation Boundary</h2>
+            <p>
+              INHERIX operates as a continuity facilitation platform and does not independently validate legal ownership, inheritance entitlement, succession claims, or statutory authority unless explicitly stated.
+            </p>
+
             <h2>Communication Consent</h2>
             <p>
               Users may receive continuity-related operational communication associated with consultation workflows, platform coordination, or governance-oriented continuity activities.
             </p>
+
+            <h2>Official Communication</h2>
+            <p>For consent-related communication, users may contact <a href={`mailto:${contactChannels.email}`}>{contactChannels.email}</a>.</p>
           </div>
         </Container>
       </section>

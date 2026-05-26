@@ -32,7 +32,7 @@ function DashboardPreviewLoadingShell() {
           </div>
           <div className="rounded-[1.7rem] border border-white/90 bg-white/60 p-4 shadow-[0_24px_70px_rgba(8,17,31,0.10)]">
             <div className="grid h-full gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {["My Assets", "Nominee Management", "Emergency Requests", "Timeline Activity", "Digital Vault", "Secure Access"].map((label) => (
+              {["My Assets", "Nominee Management", "Emergency Requests", "Timeline Activity", "Digital Vault", "Controlled Access"].map((label) => (
                 <div key={label} className="rounded-2xl border border-slate-200/80 bg-white/82 p-4 shadow-[0_12px_34px_rgba(8,17,31,0.045)]">
                   <span className="block h-4 w-4 rounded-lg bg-[#14b8a6]/40" />
                   <span className="mt-4 block text-sm font-semibold text-ink">{label}</span>
@@ -45,12 +45,12 @@ function DashboardPreviewLoadingShell() {
         <div className="relative overflow-hidden rounded-[2.35rem] border border-[#07101e]/10 bg-[#07101e] p-3 shadow-[0_34px_110px_rgba(8,17,31,0.20)]">
           <div className="rounded-[1.8rem] bg-white p-6">
             <div className="grid gap-4 lg:grid-cols-4">
-              {["Assets Stored", "Nominees", "Pending Requests", "Security Status"].map((label, index) => (
+              {["Assets Stored", "Nominees", "Pending Requests", "Security Posture"].map((label, index) => (
                 <div key={label} className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4">
                   <p className="text-[0.68rem] font-black uppercase tracking-[0.14em] text-graphite/70">{label}</p>
-                  <p className="mt-3 text-2xl font-black text-ink">{index === 3 ? "Protected" : index === 1 ? "3" : index === 2 ? "1" : "154"}</p>
+                  <p className="mt-3 text-2xl font-black text-ink">{index === 3 ? "Preview" : index === 1 ? "2" : index === 2 ? "1" : "18"}</p>
                   <div className="mt-4 h-2 rounded-full bg-slate-200">
-                    <div className="h-2 rounded-full bg-gradient-to-r from-[#6366f1] via-[#3b82f6] to-[#14b8a6]" style={{ width: index === 2 ? "38%" : "100%" }} />
+                    <div className="h-2 rounded-full bg-gradient-to-r from-[#6366f1] via-[#3b82f6] to-[#14b8a6]" style={{ width: index === 2 ? "38%" : index === 3 ? "72%" : "64%" }} />
                   </div>
                 </div>
               ))}

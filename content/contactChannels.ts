@@ -1,5 +1,5 @@
 export const contactChannels = {
-  email: "hello@inherix.com",
+  email: "admin@inherix.net",
   whatsappUrl: "https://wa.me/917291886646?text=Hello%20INHERIX%2C%20I%20would%20like%20to%20understand%20digital%20continuity%20planning.",
   socials: [
     {

@@ -24,7 +24,7 @@ const releasedItems = [
 export function NomineeDashboard() {
   const metrics = [
     { label: "My Requests", value: "2", icon: FileText, color: "bg-violet/10 text-violet" },
-    { label: "Released Items", value: "7", icon: Package, color: "bg-teal/10 text-teal" },
+    { label: "Released Items", value: "2", icon: Package, color: "bg-teal/10 text-teal" },
     { label: "Pending Proofs", value: "1", icon: AlertCircle, color: "bg-amber/10 text-amber" },
     { label: "Support Tickets", value: "1", icon: TicketCheck, color: "bg-rose/10 text-rose" }
   ];

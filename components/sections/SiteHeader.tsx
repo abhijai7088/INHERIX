@@ -1,11 +1,12 @@
 "use client";
 
-import { ArrowRight, Menu, X } from "lucide-react";
+import { ArrowRight, Mail, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Container } from "@/components/ui/Container";
+import { contactChannels } from "@/content/contactChannels";
 import { navigation } from "@/content/navigation";
 
 export function SiteHeader() {
@@ -103,7 +104,7 @@ export function SiteHeader() {
             {navigation.map((item) => {
               const active = pathname === item.href || (item.href !== "/" && pathname?.startsWith(item.href));
               return (
-                <Link key={item.href} href={item.href} prefetch {...routeWarmProps(item.href)} className="relative rounded-full px-3.5 py-1.5 text-[0.7rem] font-bold">
+                <Link key={item.href} href={item.href} prefetch {...routeWarmProps(item.href)} className="relative whitespace-nowrap rounded-full px-3 py-1.5 text-[0.7rem] font-bold 2xl:px-3.5">
                   {active ? (
                     <span className="absolute inset-0 rounded-full border border-white/10 bg-white/[0.085] shadow-[inset_0_1px_0_rgba(255,255,255,0.10)]" />
                   ) : null}
@@ -116,6 +117,15 @@ export function SiteHeader() {
           </nav>
 
           <div className="hidden min-w-fit items-center gap-3 lg:flex">
+            <a
+              href={`mailto:${contactChannels.email}`}
+              title={contactChannels.email}
+              aria-label={`Email INHERIX at ${contactChannels.email}`}
+              className="premium-glint inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/[0.055] text-sm font-bold text-white/82 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)] transition hover:-translate-y-0.5 hover:border-[#d8c99b]/35 hover:bg-white/[0.08] hover:text-white 2xl:w-auto 2xl:gap-2 2xl:px-4"
+            >
+              <Mail size={15} className="text-[#d8c99b]" />
+              <span className="hidden 2xl:inline">Email</span>
+            </a>
             <Link href="/contact" prefetch {...routeWarmProps("/contact")} className="premium-glint rounded-full border border-[rgba(255,255,255,0.18)] bg-[#111827] px-4 py-2 text-sm font-semibold text-[#f8fafc] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition hover:-translate-y-0.5 hover:border-[rgba(255,255,255,0.28)] hover:bg-[#172033] hover:text-white">
               Consultation
             </Link>
@@ -159,6 +169,16 @@ export function SiteHeader() {
               </div>
 
               <nav className="flex-1 overflow-y-auto p-5">
+                <a
+                  href={`mailto:${contactChannels.email}`}
+                  className="mb-4 flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.055] px-4 py-3 text-sm font-semibold text-white/78"
+                >
+                  <Mail size={16} className="text-[#d8c99b]" />
+                  <span className="min-w-0">
+                    <span className="block text-[0.62rem] uppercase tracking-[0.16em] text-white/42">Official Communication</span>
+                    <span className="block truncate">{contactChannels.email}</span>
+                  </span>
+                </a>
                 <div className="grid gap-2">
                   {navigation.map((item) => {
                     const active = pathname === item.href || (item.href !== "/" && pathname?.startsWith(item.href));

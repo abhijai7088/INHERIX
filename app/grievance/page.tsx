@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { MessageCircle, ShieldCheck } from "lucide-react";
+import { Mail, MessageCircle, ShieldCheck } from "lucide-react";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { PageHero } from "@/components/sections/PageHero";
 import { SocialLinks } from "@/components/sections/SocialLinks";
@@ -21,7 +21,7 @@ export default function GrievancePage() {
       <PageHero
         eyebrow="Governance Support"
         title="Grievance"
-        intro="Use this preview form to share a grievance or governance-related support concern. This website form is frontend-only until final submission infrastructure is connected."
+        intro="Use this preview form to share a grievance or governance-related support concern. Current operational communication is handled through official support channels during the controlled preview stage."
         primary="Submit Grievance"
         secondary="Contact INHERIX"
         visual="legal"
@@ -38,11 +38,21 @@ export default function GrievancePage() {
               <p className="mt-4 text-sm leading-7 text-graphite">
                 Grievance details are intended to be reviewed through a calm operational process. No legal, financial, tax, or inheritance advice is provided through this website preview.
               </p>
+              <p className="mt-4 rounded-2xl border border-[#0f766e]/18 bg-[#ecfeff] p-4 text-sm font-semibold leading-7 text-[#12383a]">
+                For current operational communication, users may contact: <a href={`mailto:${contactChannels.email}`} className="underline decoration-[#0f766e]/30 underline-offset-4">{contactChannels.email}</a>. Official support channels may respond subject to operational stage and availability.
+              </p>
+              <a
+                href={`mailto:${contactChannels.email}`}
+                className="mt-6 inline-flex items-center gap-2 rounded-full border border-[#07101e]/10 bg-white px-5 py-3 text-sm font-black text-[#07101e] shadow-panel transition hover:-translate-y-0.5 hover:border-[#0f766e]/25"
+              >
+                <Mail size={16} />
+                Email Grievance Desk
+              </a>
               <a
                 href={contactChannels.whatsappUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-6 inline-flex items-center gap-2 rounded-full border border-[#0f766e]/20 bg-[#0f766e]/8 px-5 py-3 text-sm font-black text-[#0f766e] transition hover:-translate-y-0.5 hover:bg-[#0f766e]/12"
+                className="mt-3 inline-flex items-center gap-2 rounded-full border border-[#0f766e]/20 bg-[#0f766e]/8 px-5 py-3 text-sm font-black text-[#0f766e] transition hover:-translate-y-0.5 hover:bg-[#0f766e]/12"
               >
                 <MessageCircle size={16} />
                 Continue on WhatsApp

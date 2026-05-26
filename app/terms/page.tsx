@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { TrustAndCta } from "@/components/sections/TrustAndCta";
+import { contactChannels } from "@/content/contactChannels";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
@@ -63,6 +64,9 @@ export default function TermsPage() {
             <p>
               Platform designs, operational systems, workflows, branding, UI structures, and continuity-oriented infrastructure remain protected intellectual property unless otherwise contractually agreed.
             </p>
+
+            <h2>Official Communication</h2>
+            <p>For terms-related communication, users may contact <a href={`mailto:${contactChannels.email}`}>{contactChannels.email}</a>.</p>
           </div>
         </Container>
       </section>

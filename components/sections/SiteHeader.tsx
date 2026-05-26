@@ -93,7 +93,10 @@ export function SiteHeader() {
               </span>
             </span>
             <span>
-              <span className="block text-[1.08rem] font-black leading-none text-white">INHERIX</span>
+              <span className="relative inline-flex items-start pr-4 text-[1.08rem] font-black leading-none text-white">
+                INHERIX
+                <sup className="absolute -right-0.5 -top-1 text-[0.52rem] font-black leading-none tracking-normal text-[#d8c99b]">TM</sup>
+              </span>
               <span className="mt-0.5 block text-[0.56rem] font-bold uppercase tracking-[0.20em] text-[#cbd5e1]">
                 Digital Continuity
               </span>
@@ -157,7 +160,10 @@ export function SiteHeader() {
                     <Image src="/images/inherix-symbol.png" alt="INHERIX logo" width={34} height={34} className="h-8 w-8 object-contain" />
                   </span>
                   <span>
-                    <span className="block font-black leading-none text-white">INHERIX</span>
+                    <span className="relative inline-flex items-start pr-4 font-black leading-none text-white">
+                      INHERIX
+                      <sup className="absolute -right-0.5 -top-1 text-[0.5rem] font-black leading-none tracking-normal text-[#d8c99b]">TM</sup>
+                    </span>
                     <span className="mt-1 block text-[0.58rem] font-bold uppercase tracking-[0.18em] text-[#cbd5e1]">
                       Digital Continuity
                     </span>

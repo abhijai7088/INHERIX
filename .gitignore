@@ -1,0 +1,53 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# next.js
+.next/
+.next-prod/
+out/
+
+# production/build output
+dist/
+build/
+
+# vercel
+.vercel/
+
+# local env files
+.env
+.env.*
+!.env.example
+
+# logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# caches
+.npm-cache/
+.eslintcache
+.turbo/
+
+# testing and generated reports
+coverage/
+playwright-report/
+test-results/
+visual-qa/
+docx_feedback_read/
+
+# local screenshots/artifacts
+*_screenshot.png
+edge_screenshot.png
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/

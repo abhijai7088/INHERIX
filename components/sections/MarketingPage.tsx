@@ -52,6 +52,44 @@ const iconMap = {
   UsersRound
 };
 
+const howItWorksFlow = [
+  {
+    title: "Structure Information",
+    micro: "Organized records",
+    visual: "records",
+    detail: "Organize important digital, family, and continuity records into a clear institutional structure.",
+    Icon: Layers3
+  },
+  {
+    title: "Define Instructions",
+    micro: "Continuity guidance",
+    visual: "instructions",
+    detail: "Record continuity preferences, emergency directions, and future access guidance in a reviewable format.",
+    Icon: BookOpenCheck
+  },
+  {
+    title: "Assign Nominees",
+    micro: "Trusted roles",
+    visual: "nominees",
+    detail: "Map trusted family members or nominees to specific continuity roles without exposing open access.",
+    Icon: UsersRound
+  },
+  {
+    title: "Configure Access",
+    micro: "Permission control",
+    visual: "access",
+    detail: "Set controlled visibility, permission boundaries, and verification-oriented access conditions.",
+    Icon: LockKeyhole
+  },
+  {
+    title: "Family Coordination",
+    micro: "Responsible handoff",
+    visual: "coordination",
+    detail: "Support responsible communication between family members when continuity coordination is required.",
+    Icon: Network
+  }
+];
+
 export function MarketingPage({ page }: { page: MarketingPageType }) {
   const heroVisual = {
     "how-it-works": "workflow",
@@ -112,8 +150,54 @@ function HowItWorks({ page }: { page: MarketingPageType }) {
   return (
     <>
       <EditorialOverview page={page} visual={<WorkflowMini />} />
+      <section className="relative overflow-visible bg-white pb-36 pt-12 sm:pb-40 sm:pt-16">
+        <Container>
+          <MotionReveal>
+            <div className="mb-8 max-w-3xl">
+              <Badge tone="green">Continuity flow</Badge>
+              <h2 className="mt-5 text-3xl font-black leading-tight text-ink sm:text-4xl">
+                Five practical steps for organized continuity.
+              </h2>
+              <p className="mt-4 text-sm leading-7 text-graphite">
+                A simple operating sequence keeps family continuity structured, reviewable, and easier to coordinate.
+              </p>
+            </div>
+          </MotionReveal>
+          <div className="grid gap-3 md:grid-cols-5">
+            {howItWorksFlow.map(({ title, micro, visual, detail, Icon }, index) => (
+              <MotionReveal key={title} delay={index * 0.05}>
+                <div className="how-flow-card group relative h-[11.65rem] rounded-2xl p-4" tabIndex={0}>
+                  {index < howItWorksFlow.length - 1 ? (
+                    <span className="absolute left-full top-1/2 hidden h-px w-3 bg-line transition group-hover:bg-[#5f66f3]/35 md:block" />
+                  ) : null}
+                  <div className="how-flow-popover pointer-events-none absolute left-1/2 top-[calc(100%+0.75rem)] z-20 hidden w-[18rem] -translate-x-1/2 rounded-2xl border border-white/18 bg-[#06111f] p-4 text-white opacity-0 shadow-[0_22px_60px_rgba(3,7,18,0.24)] transition duration-200 group-hover:block group-hover:opacity-100 md:block">
+                    <span className="mb-2 block text-[0.62rem] font-black uppercase tracking-[0.16em] text-[#d8c99b]">
+                      Step 0{index + 1}
+                    </span>
+                    <strong className="block text-sm font-black leading-snug">{title}</strong>
+                    <span className="mt-2 block text-xs font-medium leading-5 text-white/64">{detail}</span>
+                  </div>
+                  <div className="flex items-start justify-between gap-3">
+                    <span className="text-[0.68rem] font-black uppercase tracking-[0.16em] text-graphite/48 transition group-hover:text-[#5f66f3]/72">
+                      0{index + 1}
+                    </span>
+                    <span className="how-flow-icon relative grid h-10 w-10 place-items-center rounded-xl border border-cyan-300/25 bg-cyan-50 text-[#0b78b6] transition group-hover:border-[#d8c99b]/45 group-hover:bg-white group-hover:text-[#0b78b6]">
+                      <Icon size={17} />
+                    </span>
+                  </div>
+                  <StepMiniVisual type={visual} />
+                  <div className="absolute inset-x-4 bottom-4">
+                    <p className="mb-1 text-[0.62rem] font-black uppercase tracking-[0.14em] text-graphite/42 transition group-hover:text-[#0f766e]">{micro}</p>
+                    <h3 className="text-sm font-black leading-snug text-ink">{title}</h3>
+                  </div>
+                </div>
+              </MotionReveal>
+            ))}
+          </div>
+        </Container>
+      </section>
       <section className="premium-surface relative overflow-hidden bg-mist py-16 sm:py-24">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_0%,rgba(11,120,182,0.08),transparent_28rem),radial-gradient(circle_at_88%_12%,rgba(91,100,245,0.07),transparent_26rem)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_0%,rgba(11,120,182,0.045),transparent_28rem),radial-gradient(circle_at_88%_12%,rgba(91,100,245,0.04),transparent_26rem)]" />
         <Container className="relative">
           <div className="mb-12 max-w-3xl">
             <Badge tone="violet">Controlled Workflow</Badge>
@@ -145,6 +229,21 @@ function HowItWorks({ page }: { page: MarketingPageType }) {
         </Container>
       </section>
     </>
+  );
+}
+
+function StepMiniVisual({ type }: { type: string }) {
+  return (
+    <div className={`step-mini-visual step-mini-${type}`} aria-hidden="true">
+      <span className="step-mini-mark step-mini-mark-one" />
+      <span className="step-mini-mark step-mini-mark-two" />
+      <span className="step-mini-mark step-mini-mark-three" />
+      <span className="step-mini-line step-mini-line-one" />
+      <span className="step-mini-line step-mini-line-two" />
+      <span className="step-mini-dot step-mini-dot-one" />
+      <span className="step-mini-dot step-mini-dot-two" />
+      <span className="step-mini-dot step-mini-dot-three" />
+    </div>
   );
 }
 
@@ -224,7 +323,7 @@ function EmergencyTrigger({ page }: { page: MarketingPageType }) {
     <>
       <EditorialOverview page={page} visual={<ReviewQueue />} />
       <section className="premium-surface relative overflow-hidden bg-mist py-16 sm:py-24">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_8%,rgba(245,158,11,0.08),transparent_24rem),radial-gradient(circle_at_84%_12%,rgba(11,120,182,0.08),transparent_28rem)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_8%,rgba(245,158,11,0.045),transparent_24rem),radial-gradient(circle_at_84%_12%,rgba(11,120,182,0.045),transparent_28rem)]" />
         <Container className="relative">
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
             <div>

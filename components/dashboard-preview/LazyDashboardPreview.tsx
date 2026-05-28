@@ -14,7 +14,7 @@ export function LazyDashboardPreview() {
 function DashboardPreviewLoadingShell() {
   return (
     <section className="premium-surface relative overflow-hidden bg-[#eef2f5] py-20 sm:py-24">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_16%_18%,rgba(10,27,53,0.08),transparent_26rem),radial-gradient(circle_at_80%_12%,rgba(15,118,110,0.06),transparent_24rem)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_16%_18%,rgba(10,27,53,0.05),transparent_26rem),radial-gradient(circle_at_80%_12%,rgba(15,118,110,0.035),transparent_24rem)] pointer-events-none" />
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="mb-10 grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-stretch">
           <div className="flex flex-col justify-center">

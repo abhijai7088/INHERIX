@@ -61,9 +61,9 @@ function DarkSection({
 }) {
   return (
     <section id={id} className={`relative overflow-hidden bg-[#030712] py-24 text-white sm:py-32 ${className}`}>
-      <div className="absolute inset-0 premium-grid-dark opacity-[0.26]" />
-      <div className="absolute left-[8%] top-0 h-96 w-96 rounded-full bg-[#12375f]/25 blur-[130px]" />
-      <div className="absolute bottom-0 right-[8%] h-80 w-80 rounded-full bg-[#14b8a6]/14 blur-[120px]" />
+      <div className="absolute inset-0 premium-grid-dark opacity-[0.12]" />
+      <div className="absolute left-[8%] top-0 h-96 w-96 rounded-full bg-[#12375f]/10 blur-[130px]" />
+      <div className="absolute bottom-0 right-[8%] h-80 w-80 rounded-full bg-[#14b8a6]/6 blur-[120px]" />
       <Container className="relative z-10">{children}</Container>
     </section>
   );
@@ -74,10 +74,10 @@ export default function HomePage() {
     <>
       {/* 1. Emotional Hero */}
       <section className="relative isolate overflow-hidden bg-[#030712] text-white">
-        <div className="absolute inset-0 premium-grid-dark opacity-[0.18]" />
-        <div className="absolute left-[-10rem] top-[-8rem] h-[32rem] w-[32rem] rounded-full bg-[#2f2d91]/24 blur-[140px]" />
-        <div className="absolute bottom-[-12rem] right-[-8rem] h-[34rem] w-[34rem] rounded-full bg-[#14b8a6]/16 blur-[150px]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_34%_22%,rgba(59,130,246,0.13),transparent_30rem),radial-gradient(circle_at_74%_88%,rgba(20,184,166,0.14),transparent_28rem)]" />
+        <div className="absolute inset-0 premium-grid-dark opacity-[0.08]" />
+        <div className="absolute left-[-10rem] top-[-8rem] h-[32rem] w-[32rem] rounded-full bg-[#2f2d91]/8 blur-[140px]" />
+        <div className="absolute bottom-[-12rem] right-[-8rem] h-[34rem] w-[34rem] rounded-full bg-[#14b8a6]/6 blur-[150px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_34%_22%,rgba(59,130,246,0.045),transparent_30rem),radial-gradient(circle_at_74%_88%,rgba(20,184,166,0.05),transparent_28rem)]" />
         <div className="motion-blur-band motion-blur-band-one" />
         <div className="motion-blur-band motion-blur-band-two" />
         <div className="parallax-depth-layer" />
@@ -245,10 +245,10 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-[#eef2f5] py-24 sm:py-32">
         <div className="absolute inset-0 premium-grid opacity-45" />
         <Container>
-          <div className="relative overflow-hidden rounded-[2.5rem] border border-white/70 bg-[#07101e] p-6 text-white shadow-[0_34px_110px_rgba(8,17,31,0.18)] sm:p-8 lg:p-10">
-            <div className="absolute inset-0 premium-grid-dark opacity-35" />
-            <div className="absolute -left-28 -top-28 h-96 w-96 rounded-full bg-[#12375f]/40 blur-[120px]" />
-            <div className="absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-[#14b8a6]/16 blur-[110px]" />
+          <div className="relative overflow-hidden rounded-[2.5rem] border border-white/70 bg-[#07101e] p-6 text-white shadow-[0_24px_74px_rgba(8,17,31,0.1)] sm:p-8 lg:p-10">
+            <div className="absolute inset-0 premium-grid-dark opacity-18" />
+            <div className="absolute -left-28 -top-28 h-96 w-96 rounded-full bg-[#12375f]/16 blur-[120px]" />
+            <div className="absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-[#14b8a6]/6 blur-[110px]" />
             <div className="relative grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
               <MotionReveal>
                 <div>
@@ -577,10 +577,10 @@ export default function HomePage() {
 
       {/* 10. Founder Vision */}
       <section className="relative overflow-hidden bg-[#07111f] py-24 text-white sm:py-32">
-        <div className="absolute inset-0 premium-grid-dark opacity-20" />
+        <div className="absolute inset-0 premium-grid-dark opacity-14" />
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d8c99b]/28 to-transparent" />
-        <div className="absolute left-[-8rem] top-[-8rem] h-[30rem] w-[30rem] rounded-full bg-[#12375f]/24 blur-[130px]" />
-        <div className="absolute bottom-[-12rem] right-[-8rem] h-[34rem] w-[34rem] rounded-full bg-[#14b8a6]/16 blur-[140px]" />
+        <div className="absolute left-[-8rem] top-[-8rem] h-[30rem] w-[30rem] rounded-full bg-[#12375f]/14 blur-[130px]" />
+        <div className="absolute bottom-[-12rem] right-[-8rem] h-[34rem] w-[34rem] rounded-full bg-[#14b8a6]/10 blur-[140px]" />
         <Container className="relative z-10">
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
             <MotionReveal>
@@ -649,7 +649,7 @@ export default function HomePage() {
 
       {/* 12. Future of Digital Continuity */}
       <section className="relative overflow-hidden bg-[#0a1624] py-20 text-white sm:py-28">
-        <div className="absolute inset-0 premium-grid-dark opacity-18" />
+        <div className="absolute inset-0 premium-grid-dark opacity-12" />
         <Container className="relative z-10">
           <MotionReveal>
             <div className="mx-auto max-w-5xl rounded-[2.3rem] border border-white/10 bg-white/[0.045] p-8 text-center backdrop-blur sm:p-12">
@@ -663,10 +663,10 @@ export default function HomePage() {
 
       {/* 13. Premium CTA */}
       <section className="relative overflow-hidden bg-[#050816] py-28 text-white sm:py-36">
-        <div className="absolute inset-0 premium-grid-dark opacity-20" />
+        <div className="absolute inset-0 premium-grid-dark opacity-14" />
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/12 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-96 bg-[radial-gradient(circle_at_50%_100%,rgba(216,201,155,0.16),transparent_38rem)]" />
-        <div className="absolute left-1/2 top-1/2 h-[38rem] w-[38rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#12375f]/18 blur-[150px]" />
+        <div className="absolute inset-x-0 bottom-0 h-96 bg-[radial-gradient(circle_at_50%_100%,rgba(216,201,155,0.095),transparent_38rem)]" />
+        <div className="absolute left-1/2 top-1/2 h-[38rem] w-[38rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#12375f]/11 blur-[150px]" />
         <Container className="relative z-10">
           <MotionReveal>
             <div className="mx-auto max-w-6xl overflow-hidden rounded-[2.8rem] border border-white/12 bg-[#0b1625]/82 p-8 text-center shadow-[0_34px_130px_rgba(0,0,0,0.30)] backdrop-blur sm:p-14 lg:p-16">

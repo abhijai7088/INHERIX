@@ -41,10 +41,10 @@ export function PageHero({
 
   return (
     <section className="hero-dark relative overflow-hidden border-b border-white/10 pb-20 pt-28 text-white sm:pb-24 sm:pt-32">
-      <div className="absolute inset-0 premium-grid-dark opacity-45" />
-      <div className="absolute left-[16%] top-[8%] h-[30rem] w-[30rem] rounded-full bg-violet/10 blur-[130px]" />
-      <div className="absolute bottom-[-12rem] right-[18%] h-[28rem] w-[28rem] rounded-full bg-[#0b78b6]/10 blur-[120px]" />
-      <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-[#5bd7ff]/50 to-transparent" />
+      <div className="absolute inset-0 premium-grid-dark opacity-30" />
+      <div className="absolute left-[16%] top-[8%] h-[30rem] w-[30rem] rounded-full bg-violet/6 blur-[130px]" />
+      <div className="absolute bottom-[-12rem] right-[18%] h-[28rem] w-[28rem] rounded-full bg-[#0b78b6]/6 blur-[120px]" />
+      <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-[#5bd7ff]/30 to-transparent" />
 
       <Container className="relative">
         <div className="grid min-w-0 gap-10 xl:grid-cols-[minmax(0,0.88fr)_minmax(420px,0.92fr)] xl:items-center">
@@ -100,7 +100,7 @@ function HeroPanel({ children }: { children: ReactNode }) {
     <div className="panel-sheen premium-depth relative mx-auto max-w-2xl rounded-[2rem] border border-white/10 bg-white/5 p-2 shadow-soft backdrop-blur">
       <div className="premium-orbit" />
       <div className="relative min-h-[420px] overflow-hidden rounded-[1.55rem] border border-white/10 bg-[#060b15] p-6">
-        <div className="absolute inset-0 premium-grid-dark opacity-45" />
+        <div className="absolute inset-0 premium-grid-dark opacity-30" />
         <div className="relative">{children}</div>
       </div>
     </div>
@@ -198,7 +198,7 @@ function FamilyHero() {
     <HeroPanel>
       <VisualTitle eyebrow="Family access" title="Trusted relationship governance" icon={<Network size={20} />} />
       <div className="relative mt-8 overflow-hidden rounded-[1.35rem] border border-white/10 bg-white/[0.035] p-4 sm:p-5">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_35%_0%,rgba(91,215,255,0.14),transparent_15rem),radial-gradient(circle_at_90%_95%,rgba(20,184,166,0.12),transparent_13rem)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_35%_0%,rgba(91,215,255,0.08),transparent_15rem),radial-gradient(circle_at_90%_95%,rgba(20,184,166,0.07),transparent_13rem)]" />
         <div className="relative grid gap-4 lg:grid-cols-[0.86fr_1fr]">
           <div className="rounded-[1.15rem] border border-white/10 bg-[#050a13]/72 p-4">
             <div className="mb-4 flex items-center justify-between gap-3">
@@ -353,7 +353,7 @@ function ContactHero() {
     <HeroPanel>
       <VisualTitle eyebrow="Consultation flow" title="From request to structured guidance" icon={<CalendarClock size={20} />} />
       <div className="relative mt-8 overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-5 text-white shadow-panel">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(91,215,255,0.13),transparent_12rem)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(91,215,255,0.08),transparent_12rem)]" />
         <div className="relative grid gap-4">
           {[
             ["01", "Share details", "Use the consultation form below"],

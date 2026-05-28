@@ -52,10 +52,19 @@ export function AmbientAudioToggle() {
       aria-label={enabled ? "Pause INHERIX background audio" : "Play INHERIX background audio"}
       aria-pressed={enabled}
       onClick={toggleAudio}
-      className="fixed bottom-5 left-5 z-40 grid h-11 w-11 place-items-center rounded-full border border-white/16 bg-[#06111f] text-[#d8c99b] shadow-[0_16px_40px_rgba(3,7,18,0.34),0_0_0_1px_rgba(255,255,255,0.05)] transition hover:-translate-y-0.5 hover:border-[#c8b88a]/45 hover:bg-[#0a1b35] sm:bottom-6 sm:left-6 sm:h-12 sm:w-12"
+      className="fixed bottom-4 left-4 z-40 grid h-9 w-9 place-items-center rounded-full border transition hover:-translate-y-0.5 sm:bottom-5 sm:left-5 sm:h-10 sm:w-10"
+      style={{
+        backgroundColor: "rgba(6, 17, 31, 0.94)",
+        borderColor: "rgba(15, 23, 42, 0.22)",
+        boxShadow: "0 8px 22px rgba(15, 23, 42, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.08)",
+        color: "#d8c99b"
+      }}
     >
-      <span className="grid h-8 w-8 place-items-center rounded-full bg-[#12375f]">
-        {enabled ? <Volume2 size={17} /> : <VolumeX size={17} />}
+      <span
+        className="grid h-6 w-6 place-items-center rounded-full"
+        style={{ backgroundColor: "rgba(18, 55, 95, 0.92)" }}
+      >
+        {enabled ? <Volume2 size={14} /> : <VolumeX size={14} />}
       </span>
     </button>
   );

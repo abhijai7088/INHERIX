@@ -8,12 +8,19 @@ export function FloatingWhatsApp() {
       target="_blank"
       rel="noreferrer"
       aria-label="Contact INHERIX on WhatsApp"
-      className="fixed bottom-5 right-5 z-40 inline-flex min-h-12 items-center gap-2 rounded-full border border-white/18 bg-[#06111f] px-4 py-3 text-sm font-black text-white shadow-[0_18px_48px_rgba(3,7,18,0.42),0_0_0_1px_rgba(255,255,255,0.05)] ring-1 ring-black/10 transition hover:-translate-y-0.5 hover:border-[#c8b88a]/45 hover:bg-[#0a1b35] sm:bottom-6 sm:right-6"
+      className="fixed bottom-4 right-4 z-40 grid h-10 w-10 place-items-center rounded-full border text-white transition hover:-translate-y-0.5 sm:bottom-5 sm:right-5 sm:h-11 sm:w-11"
+      style={{
+        backgroundColor: "rgba(6, 17, 31, 0.94)",
+        borderColor: "rgba(15, 23, 42, 0.22)",
+        boxShadow: "0 8px 22px rgba(15, 23, 42, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.08)"
+      }}
     >
-      <span className="grid h-8 w-8 place-items-center rounded-full bg-[#0f766e] text-white">
-        <MessageCircle size={17} />
+      <span
+        className="grid h-7 w-7 place-items-center rounded-full text-white"
+        style={{ backgroundColor: "rgba(15, 118, 110, 0.95)" }}
+      >
+        <MessageCircle size={15} />
       </span>
-      <span className="hidden text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.55)] sm:inline">WhatsApp</span>
     </a>
   );
 }

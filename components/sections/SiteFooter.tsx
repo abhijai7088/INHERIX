@@ -34,6 +34,12 @@ const trustBadges = [
   "DPDP Act Aware"
 ];
 
+const institutionalFooterNotes = [
+  "Trademark Applied \u2122",
+  "Structured Digital Continuity Platform",
+  "Controlled Preview Environment"
+];
+
 export function SiteFooter() {
   return (
     <footer className="relative overflow-hidden border-t border-white/10 bg-[#050816] text-white">
@@ -45,8 +51,8 @@ export function SiteFooter() {
           <p className="text-xs font-black uppercase tracking-[0.22em] text-[#d8c99b]">
             Building India&apos;s Digital Continuity Infrastructure.
           </p>
-          <p className="mt-2 text-xs font-semibold leading-5 text-white/56">
-            Trademark Applied™. Platform currently in controlled preview stage.
+          <p className="mt-2 text-xs font-semibold leading-5 text-white/[0.56]">
+            {"Trademark Applied\u2122. Platform currently in controlled preview stage."}
           </p>
         </div>
 
@@ -158,9 +164,17 @@ export function SiteFooter() {
 
         <div className="mt-8 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
+        <div className="mt-5 flex flex-wrap gap-2">
+          {institutionalFooterNotes.map((note) => (
+            <span key={note} className="rounded-lg border border-white/[0.10] bg-white/[0.035] px-3 py-1.5 text-[0.7rem] font-semibold tracking-[0.06em] text-white/[0.46]">
+              {note}
+            </span>
+          ))}
+        </div>
+
         <div className="mt-5 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
           <p className="text-xs text-white/44">
-            &copy; INHERIX. Trademark Applied™.
+            {"\u00A9 INHERIX. Trademark Applied\u2122."}
           </p>
           <div className="flex flex-wrap items-center gap-3">
             {["DPDP Act Aware", "IT Act 2000", "Controlled Preview Stage"].map((badge) => (

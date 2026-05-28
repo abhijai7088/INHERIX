@@ -40,14 +40,14 @@ export function PageHero({
   const secondaryHref = visual === "contact" ? "/dashboard-preview" : "/dashboard-preview";
 
   return (
-    <section className="hero-dark relative overflow-hidden border-b border-white/10 pb-20 pt-28 text-white sm:pb-24 sm:pt-32">
+    <section className="hero-dark relative overflow-hidden border-b border-white/10 pb-20 pt-20 text-white sm:pb-24 sm:pt-24">
       <div className="absolute inset-0 premium-grid-dark opacity-30" />
       <div className="absolute left-[16%] top-[8%] h-[30rem] w-[30rem] rounded-full bg-violet/6 blur-[130px]" />
       <div className="absolute bottom-[-12rem] right-[18%] h-[28rem] w-[28rem] rounded-full bg-[#0b78b6]/6 blur-[120px]" />
       <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-[#5bd7ff]/30 to-transparent" />
 
       <Container className="relative">
-        <div className="grid min-w-0 gap-10 xl:grid-cols-[minmax(0,0.88fr)_minmax(420px,0.92fr)] xl:items-center">
+        <div className="grid min-w-0 gap-10 xl:grid-cols-[minmax(0,0.8fr)_minmax(620px,1.2fr)] xl:items-center">
           <div className="animate-fade-up min-w-0 max-w-3xl [animation-fill-mode:both]">
             <div className="inline-flex items-center gap-2 rounded-full border border-teal/25 bg-[#0b78b6]/10 px-4 py-2 text-xs font-black text-[#5bd7ff]">
               <span className="h-1.5 w-1.5 rounded-full bg-[#5bd7ff]" />
@@ -122,39 +122,146 @@ function VisualTitle({ eyebrow, title, icon }: { eyebrow: string; title: string;
 }
 
 function WorkflowHero() {
-  const stages = ["Client", "Nominee", "Proof", "Review", "Release"];
+  const steps = [
+    { title: "Structure Information", text: "Organize important information in a secure digital vault.", Icon: FileLock2, preview: "vault", tone: "from-[#0b78b6]/28 to-[#5b64f5]/10" },
+    { title: "Define Instructions", text: "Add clear instructions for every situation and wish.", Icon: BookOpenCheck, preview: "instructions", tone: "from-[#0b78b6]/24 to-[#5bd7ff]/10" },
+    { title: "Assign Nominees", text: "Select trusted nominees and define roles clearly.", Icon: UsersRound, preview: "nominees", tone: "from-[#5b64f5]/26 to-[#a43fe0]/10" },
+    { title: "Configure Access", text: "Set access levels, conditions and verification for each nominee.", Icon: LockKeyhole, preview: "access", tone: "from-[#0b78b6]/26 to-[#5b64f5]/10" },
+    { title: "Family Coordination", text: "Keep your family informed and aligned when it matters most.", Icon: Network, preview: "family", tone: "from-[#0f766e]/32 to-[#d8c99b]/10" }
+  ];
+
   return (
-    <HeroPanel>
-      <VisualTitle eyebrow="Continuity map" title="Controlled workflow" icon={<ShieldCheck size={20} />} />
-      <div className="relative mt-10 h-56">
-        <svg className="absolute inset-0 h-full w-full" viewBox="0 0 560 240" aria-hidden="true">
-          <defs>
-            <linearGradient id="hero-path" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#5b64f5" />
-              <stop offset="100%" stopColor="#14b8a6" />
-            </linearGradient>
-          </defs>
-          <path className="draw-line" d="M48 154 C128 62, 212 202, 298 126 S436 60, 516 140" fill="none" stroke="url(#hero-path)" strokeLinecap="round" strokeWidth="5" />
-        </svg>
-        {stages.map((stage, index) => (
-          <span
-            key={stage}
-            className="soft-pulse absolute grid h-[4.6rem] w-20 place-items-center rounded-2xl border border-white/10 bg-white text-center text-xs font-black text-ink shadow-panel"
-            style={{ left: `${2 + index * 22}%`, top: index % 2 ? "56%" : "12%", animationDelay: `${index * 0.16}s` }}
-          >
-            {stage}
+    <div className="panel-sheen premium-depth relative mx-auto w-full max-w-4xl rounded-[1.8rem] border border-[#5bd7ff]/14 bg-white/5 p-2 shadow-soft backdrop-blur">
+      <div className="premium-orbit" />
+      <div className="relative overflow-hidden rounded-[1.45rem] border border-[#5bd7ff]/14 bg-[#030712] p-4 sm:p-5">
+        <div className="absolute inset-0 premium-grid-dark opacity-24" />
+        <div className="absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 rounded-full bg-[#0b78b6]/14 blur-[100px]" />
+        <div className="absolute bottom-[-7rem] left-[8%] h-64 w-64 rounded-full bg-[#5b64f5]/10 blur-[100px]" />
+        <div className="absolute bottom-[-6rem] right-[6%] h-64 w-64 rounded-full bg-[#14b8a6]/10 blur-[100px]" />
+        <div className="relative">
+          <div className="text-center">
+            <p className="flex items-center justify-center gap-4 text-xs font-black uppercase tracking-[0.24em] text-[#5bd7ff]">
+              <span className="hidden h-px w-12 bg-[#5bd7ff]/50 sm:block" />
+              How INHERIX Works
+              <span className="hidden h-px w-12 bg-[#5bd7ff]/50 sm:block" />
+            </p>
+            <h2 className="mx-auto mt-3 max-w-4xl font-display text-3xl font-black leading-tight text-white sm:text-4xl lg:text-[3.2rem]">
+              Five Steps to <span className="bg-gradient-to-r from-[#5bd7ff] via-[#5b64f5] to-[#14b8a6] bg-clip-text text-transparent">Secure Family Continuity</span>
+            </h2>
+          </div>
+
+          <div className="relative mt-8 grid gap-3 xl:grid-cols-5">
+            <div className="absolute left-[8%] right-[8%] top-7 hidden border-t border-dashed border-[#5bd7ff]/40 xl:block" />
+            {steps.map(({ title, text, Icon, preview, tone }, index) => (
+              <div key={title} className="relative">
+                {index < steps.length - 1 ? (
+                  <ArrowRight className="absolute -right-5 top-7 z-20 hidden text-[#5bd7ff] xl:block" size={20} />
+                ) : null}
+                <div className={`relative z-10 mx-auto grid h-14 w-14 place-items-center rounded-full border border-[#5bd7ff]/38 bg-gradient-to-br ${index === 4 ? "from-[#14b8a6] to-[#0f766e]" : "from-[#0b78b6] to-[#5b64f5]"} text-xl font-black text-white shadow-[0_0_34px_rgba(91,215,255,0.28)]`}>
+                  {index + 1}
+                </div>
+                <div className={`mt-3 flex min-h-[23.5rem] flex-col rounded-[1.25rem] border border-[#1f8fff]/28 bg-gradient-to-b ${tone} p-3 text-center shadow-[0_22px_60px_rgba(0,0,0,0.24)]`}>
+                  <Icon className="mx-auto text-[#5bd7ff]" size={24} />
+                  <h3 className="mt-3 min-h-[2.6rem] text-base font-black leading-tight text-white">{title}</h3>
+                  <p className="mx-auto mt-2 min-h-[3.8rem] max-w-[10.5rem] text-[0.72rem] font-medium leading-[1.15rem] text-white/72">{text}</p>
+                  <WorkflowStepPreview type={preview} />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-5 grid gap-2 rounded-[1.35rem] border border-[#5bd7ff]/14 bg-white/[0.045] p-3 sm:grid-cols-5">
+            {["Information Structured", "Instructions Defined", "Nominees Assigned", "Access Configured", "Family Secured"].map((item, index) => (
+              <div key={item} className="flex items-center justify-center gap-2 rounded-2xl px-2 py-2 text-center text-[0.72rem] font-bold text-white/68">
+                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full border border-[#5bd7ff]/20 bg-[#0b78b6]/15">
+                  <CheckCircle2 size={14} className={index === 4 ? "text-[#14b8a6]" : "text-[#5bd7ff]"} />
+                </span>
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function WorkflowStepPreview({ type }: { type: string }) {
+  if (type === "vault") {
+    return (
+      <div className="mt-auto rounded-2xl border border-[#5bd7ff]/16 bg-[#07111f]/82 p-2.5">
+        <div className="relative mx-auto mb-2.5 grid h-16 w-20 place-items-center rounded-2xl border border-[#5bd7ff]/18 bg-[#0b78b6]/12">
+          <div className="absolute bottom-2 h-10 w-12 rounded-xl bg-[#1f93f2]/25 shadow-[0_0_28px_rgba(31,147,242,0.22)]" />
+          <FileLock2 className="relative text-[#5bd7ff]" size={24} />
+        </div>
+        <div className="grid grid-cols-2 gap-1.5">
+          {["Property", "Legal", "Banking", "Assets"].map((item) => (
+            <span key={item} className="min-w-0 rounded-lg border border-white/8 bg-white/[0.055] px-1 py-1.5 text-center text-[0.48rem] font-bold leading-none text-white/66">
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
+    );
+  }
+  if (type === "instructions") {
+    return (
+      <div className="mt-auto rounded-2xl border border-[#5bd7ff]/16 bg-[#07111f]/82 p-2.5">
+        <p className="mb-2 text-left text-[0.58rem] font-black text-white/70">Instructions</p>
+        {["Emergency", "Legal Notes", "Asset Wishes", "Medical"].map((item) => (
+          <div key={item} className="mb-1.5 flex items-center gap-2 rounded-xl bg-white/[0.055] px-2.5 py-1.5 last:mb-0">
+            <CheckCircle2 size={12} className="text-[#14b8a6]" />
+            <span className="text-[0.55rem] font-bold text-white/68">{item}</span>
+          </div>
+        ))}
+      </div>
+    );
+  }
+  if (type === "nominees") {
+    return (
+      <div className="relative mt-auto h-28 overflow-hidden rounded-2xl border border-[#5bd7ff]/16 bg-[#07111f]/82">
+        <span className="absolute inset-x-4 top-1/2 h-px border-t border-dashed border-[#5bd7ff]/32" />
+        <span className="absolute left-1/2 top-5 h-[4.7rem] -translate-x-1/2 border-l border-dashed border-[#5bd7ff]/32" />
+        <span className="absolute left-1/2 top-1/2 grid h-10 w-10 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-[#8b7cff]/36 bg-[#8b7cff]/18 text-[0.58rem] font-black text-white shadow-[0_0_22px_rgba(139,124,255,0.16)]">You</span>
+        {[
+          { label: "Primary", className: "left-1/2 top-3 -translate-x-1/2" },
+          { label: "Co", className: "left-2 top-1/2 -translate-y-1/2" },
+          { label: "Co", className: "right-2 top-1/2 -translate-y-1/2" },
+          { label: "Contingent", className: "left-1/2 bottom-2 -translate-x-1/2" }
+        ].map((node) => (
+          <span key={node.label + node.className} className={`absolute rounded-full border border-[#5bd7ff]/28 bg-[#07111f] px-2 py-1 text-[0.48rem] font-black text-white/80 ${node.className}`}>
+            {node.label}
           </span>
         ))}
       </div>
-      <div className="mt-5 grid gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 sm:grid-cols-3">
-        {["Verification-first", "Audit-visible", "Preview-only"].map((item) => (
-          <p key={item} className="flex items-center gap-2 text-xs font-bold text-white/70">
-            <CheckCircle2 size={14} className="text-[#5bd7ff]" />
-            {item}
-          </p>
-        ))}
+    );
+  }
+  if (type === "access") {
+    return (
+      <div className="mt-auto rounded-2xl border border-[#5bd7ff]/16 bg-[#07111f]/82 p-2.5">
+        <div className="mx-auto grid h-16 w-16 place-items-center rounded-[1.1rem] border border-[#5bd7ff]/24 bg-[#0b78b6]/18 text-[#5bd7ff] shadow-[0_0_30px_rgba(91,215,255,0.14)]">
+          <ShieldCheck size={30} />
+        </div>
+        <div className="mt-3 grid grid-cols-3 gap-1.5">
+          {["Rules", "Verify", "Release"].map((item) => (
+            <span key={item} className="rounded-lg bg-white/[0.055] py-1.5 text-[0.5rem] font-bold text-white/62">{item}</span>
+          ))}
+        </div>
       </div>
-    </HeroPanel>
+    );
+  }
+  return (
+    <div className="mt-auto rounded-2xl border border-[#14b8a6]/20 bg-gradient-to-b from-[#0f766e]/20 to-[#07111f]/82 p-2.5">
+      <div className="mb-2.5 grid h-14 place-items-center rounded-2xl bg-[radial-gradient(circle_at_50%_80%,rgba(216,201,155,0.28),transparent_4rem)]">
+        <UsersRound className="text-[#d8c99b]" size={28} />
+      </div>
+      {["Notifications", "Secure Updates", "Coordination"].map((item) => (
+        <div key={item} className="mb-1.5 flex items-center gap-2 rounded-xl bg-white/[0.055] px-2.5 py-1.5 last:mb-0">
+          <Network size={12} className="text-[#5bd7ff]" />
+          <span className="text-[0.54rem] font-bold text-white/68">{item}</span>
+        </div>
+      ))}
+    </div>
   );
 }
 

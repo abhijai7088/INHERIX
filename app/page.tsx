@@ -5,6 +5,7 @@ import {
   Activity,
   ArrowRight,
   BadgeCheck,
+  BookOpenCheck,
   Building2,
   ClipboardCheck,
   Eye,
@@ -41,6 +42,189 @@ const roleIcons = [UsersRound, UserCheck, Landmark, ShieldCheck];
 const governanceIcons = [BadgeCheck, LockKeyhole, Activity, UsersRound, Fingerprint, Eye];
 const securityIcons = [ShieldCheck, Building2, LockKeyhole, Activity, Layers3, Scale];
 const professionalNetworkIcons = [Landmark, Scale, BadgeCheck, ShieldCheck, Building2, Network];
+
+function HomeSystemFlowVisual() {
+  const steps = [
+    {
+      title: "Structure",
+      sub: "Information",
+      text: "Organize records",
+      Icon: FileLock2,
+      kind: "vault"
+    },
+    {
+      title: "Define",
+      sub: "Instructions",
+      text: "Set guidance",
+      Icon: BookOpenCheck,
+      kind: "instructions"
+    },
+    {
+      title: "Assign",
+      sub: "Nominees",
+      text: "Map roles",
+      Icon: UsersRound,
+      kind: "nominees"
+    },
+    {
+      title: "Configure",
+      sub: "Access",
+      text: "Control release",
+      Icon: LockKeyhole,
+      kind: "access"
+    },
+    {
+      title: "Family",
+      sub: "Coordination",
+      text: "Stay aligned",
+      Icon: Network,
+      kind: "family"
+    }
+  ];
+
+  return (
+    <div className="relative overflow-hidden rounded-[1.8rem] border border-[#5bd7ff]/14 bg-[#030712] p-4 text-white shadow-[0_26px_80px_rgba(8,17,31,0.18)] sm:p-5">
+      <div className="absolute inset-0 premium-grid-dark opacity-24" />
+      <div className="absolute left-1/2 top-0 h-52 w-52 -translate-x-1/2 rounded-full bg-[#5b64f5]/16 blur-[80px]" />
+      <div className="absolute bottom-0 right-8 h-44 w-44 rounded-full bg-[#14b8a6]/14 blur-[80px]" />
+      <div className="relative">
+        <div className="text-center">
+          <h3 className="font-display text-2xl font-black leading-tight text-white sm:text-3xl">
+            <span className="bg-gradient-to-r from-[#8b7cff] to-[#5bd7ff] bg-clip-text text-transparent">INHERIX</span>{" "}
+            System Flow
+          </h3>
+          <p className="mx-auto mt-2 max-w-2xl text-xs font-medium leading-5 text-white/66 sm:text-sm">
+            A structured 5-step journey to secure your legacy and ensure family continuity.
+          </p>
+        </div>
+
+        <div className="relative mt-5 grid gap-2 sm:grid-cols-5">
+          <div className="absolute left-[8%] right-[8%] top-6 hidden h-px bg-gradient-to-r from-[#8b7cff]/45 via-[#5bd7ff]/35 to-[#14b8a6]/35 sm:block" />
+          {steps.map(({ title, sub, text, Icon, kind }, index) => (
+            <div key={`${title}-${sub}`} className="relative rounded-[1rem] border border-[#5bd7ff]/14 bg-[#07111f]/72 p-2.5 shadow-[0_18px_46px_rgba(0,0,0,0.16)]">
+              <div className="relative z-10 mx-auto grid h-12 w-12 place-items-center rounded-full border border-[#5bd7ff]/36 bg-[#07111f] text-base font-black text-white shadow-[0_0_24px_rgba(91,215,255,0.20)]">
+                {index + 1}
+              </div>
+              {index < steps.length - 1 ? (
+                <ArrowRight className="absolute -right-3 top-[4.4rem] z-10 hidden text-[#8b7cff] sm:block" size={16} />
+              ) : null}
+              <div className="mt-3 min-h-[5.5rem]">
+                <Icon className="text-[#8b7cff]" size={21} />
+                <h4 className="mt-2 text-sm font-black leading-tight text-white">{title}</h4>
+                <p className="text-xs font-black leading-tight text-white/84">{sub}</p>
+                <p className="mt-1 text-[0.62rem] font-semibold leading-4 text-white/54">{text}</p>
+              </div>
+              <HomeFlowMiniPanel kind={kind} />
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-4 rounded-[1.15rem] border border-[#5bd7ff]/14 bg-white/[0.035] p-3">
+          <div className="grid gap-3 lg:grid-cols-[0.82fr_1.8fr] lg:items-center">
+            <div className="flex items-center gap-3">
+              <span className="grid h-10 w-10 place-items-center rounded-2xl border border-[#8b7cff]/28 bg-[#8b7cff]/12 text-[#8b7cff]">
+                <ShieldCheck size={20} />
+              </span>
+              <div>
+                <p className="font-display text-base font-black text-white">INHERIX</p>
+                <p className="text-[0.62rem] font-semibold leading-tight text-white/54">Structured Digital Trust Infrastructure</p>
+              </div>
+            </div>
+            <div className="grid gap-2 sm:grid-cols-5">
+              {["Information Structured", "Instructions Defined", "Nominees Assigned", "Access Configured", "Family Secured"].map((item, index) => (
+                <div key={item} className="flex items-center gap-1.5 rounded-xl bg-white/[0.045] px-2 py-1.5">
+                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full border border-[#8b7cff]/20 bg-[#8b7cff]/10 text-[0.62rem] font-black text-white">
+                    {index + 1}
+                  </span>
+                  <span className="text-[0.56rem] font-bold leading-tight text-white/68">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="mt-3 flex flex-wrap justify-center gap-4 border-t border-white/10 pt-2.5 text-[0.68rem] font-semibold text-white/54">
+            <span>Secure</span>
+            <span>Private</span>
+            <span>Compliant</span>
+            <span className="text-[#99f6e4]">Built for Generations</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function HomeFlowMiniPanel({ kind }: { kind: string }) {
+  if (kind === "vault") {
+    return (
+      <div className="mt-2 rounded-xl border border-white/10 bg-white/[0.045] p-2">
+        {["Property", "Banking", "Insurance"].map((item) => (
+          <div key={item} className="mb-1.5 flex items-center justify-between rounded-lg bg-white/[0.055] px-2 py-1.5 last:mb-0">
+            <span className="text-[0.52rem] font-bold text-white/70">{item}</span>
+            <ArrowRight size={9} className="text-white/38" />
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  if (kind === "instructions") {
+    return (
+      <div className="mt-2 rounded-xl border border-white/10 bg-white/[0.045] p-2">
+        {["Emergency", "Legal", "Medical"].map((item) => (
+          <div key={item} className="mb-1.5 flex items-center gap-1.5 rounded-lg bg-white/[0.055] px-2 py-1.5 last:mb-0">
+            <BadgeCheck size={10} className="text-[#14b8a6]" />
+            <span className="text-[0.52rem] font-bold text-white/70">{item}</span>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  if (kind === "nominees") {
+    return (
+      <div className="relative mt-2 h-[6.35rem] overflow-hidden rounded-xl border border-white/10 bg-white/[0.045]">
+        <span className="absolute inset-3 rounded-full border border-dashed border-[#8b7cff]/32" />
+        <span className="absolute left-1/2 top-1/2 h-px w-[72%] -translate-x-1/2 border-t border-dashed border-[#5bd7ff]/28" />
+        <span className="absolute left-1/2 top-[18%] h-[68%] -translate-x-1/2 border-l border-dashed border-[#5bd7ff]/28" />
+        <span className="absolute left-1/2 top-1/2 grid h-9 w-9 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-[#8b7cff]/34 bg-[#8b7cff]/16 text-[0.55rem] font-black text-white">You</span>
+        {[
+          { label: "P", className: "left-1/2 top-2 -translate-x-1/2" },
+          { label: "Co", className: "left-1.5 top-1/2 -translate-y-1/2" },
+          { label: "Co", className: "right-1.5 top-1/2 -translate-y-1/2" },
+          { label: "C", className: "left-1/2 bottom-1.5 -translate-x-1/2" }
+        ].map((node) => (
+          <span key={node.label + node.className} className={`absolute rounded-full border border-[#5bd7ff]/26 bg-[#07111f] px-2 py-1 text-[0.5rem] font-black text-white/78 ${node.className}`}>
+            {node.label}
+          </span>
+        ))}
+      </div>
+    );
+  }
+
+  if (kind === "access") {
+    return (
+      <div className="mt-2 rounded-xl border border-white/10 bg-white/[0.045] p-2">
+        {["Certificate", "Verification", "Waiting"].map((item) => (
+          <div key={item} className="mb-1.5 flex items-center justify-between rounded-lg bg-white/[0.055] px-2 py-1.5 last:mb-0">
+            <span className="text-[0.52rem] font-bold text-white/70">{item}</span>
+            <BadgeCheck size={10} className="text-[#14b8a6]" />
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  return (
+    <div className="mt-2 rounded-xl border border-white/10 bg-white/[0.045] p-2">
+      {["Notifications", "Updates", "Secure Chat"].map((item) => (
+        <div key={item} className="mb-1.5 flex items-center gap-1.5 rounded-lg bg-white/[0.055] px-2 py-1.5 last:mb-0">
+          <Network size={10} className="text-[#5bd7ff]" />
+          <span className="text-[0.52rem] font-bold text-white/70">{item}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 function DemoDisclaimer({ className = "" }: { className?: string }) {
   return (
@@ -195,7 +379,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-[#eef2f5] pb-24 pt-28 sm:pb-32 sm:pt-36">
         <div className="absolute inset-0 premium-grid opacity-70" />
         <Container className="relative z-10">
-          <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div className="grid gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
             <MotionReveal>
               <div>
                 <Badge tone="amber">{homePage.problem.eyebrow}</Badge>
@@ -224,17 +408,20 @@ export default function HomePage() {
               </div>
             </MotionReveal>
             <MotionReveal delay={0.08}>
-              <div className="relative overflow-hidden rounded-[2rem] border border-white/80 bg-white p-2 shadow-[0_22px_70px_rgba(8,17,31,0.13)]">
-                <div className="overflow-hidden rounded-[1.55rem] bg-[#08111f]">
-                  <Image
-                    src={homePage.assets.problem}
-                    alt="Fragmented family records representing digital continuity challenges"
-                    width={1710}
-                    height={960}
-                    sizes="(min-width: 1024px) 48vw, 100vw"
-                    className="h-auto w-full object-contain"
-                  />
+              <div className="grid gap-5">
+                <div className="relative overflow-hidden rounded-[2rem] border border-white/80 bg-white p-2 shadow-[0_22px_70px_rgba(8,17,31,0.13)]">
+                  <div className="overflow-hidden rounded-[1.55rem] bg-[#08111f]">
+                    <Image
+                      src={homePage.assets.problem}
+                      alt="Fragmented family records representing digital continuity challenges"
+                      width={1710}
+                      height={960}
+                      sizes="(min-width: 1024px) 48vw, 100vw"
+                      className="h-auto w-full object-contain"
+                    />
+                  </div>
                 </div>
+                <HomeSystemFlowVisual />
               </div>
             </MotionReveal>
           </div>

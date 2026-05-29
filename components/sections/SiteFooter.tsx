@@ -152,7 +152,7 @@ export function SiteFooter() {
               <div className="min-w-0">
                 <p className="flex items-center gap-1.5 text-xs font-black uppercase tracking-[0.16em] text-[#d8c99b]">
                   <QrCode size={13} />
-                  Google QR
+                  Verify INHERIX Presence
                 </p>
                 <p className="mt-1 text-xs leading-5 text-white/48">
                   Scan-only business profile reference.

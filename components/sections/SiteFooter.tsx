@@ -40,7 +40,11 @@ const institutionalFooterNotes = [
   "Controlled Preview Environment"
 ];
 
+const companyLegalName = "INHERIX CONTINUITY PVT LTD";
+
 export function SiteFooter() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="relative overflow-hidden border-t border-white/10 bg-[#050816] text-white">
       <div className="pointer-events-none absolute inset-0 premium-grid-dark opacity-32" />
@@ -73,6 +77,11 @@ export function SiteFooter() {
             <p className="mt-4 max-w-sm text-sm leading-6 text-white/60">
               Helping modern Indian families organize critical digital information, define trusted continuity relationships, and manage controlled access through structured governance-oriented workflows.
             </p>
+
+            <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.045] p-4">
+              <p className="text-[0.68rem] font-black uppercase tracking-[0.18em] text-white/42">Company</p>
+              <p className="mt-1 text-sm font-black tracking-[0.08em] text-white/78">{companyLegalName}</p>
+            </div>
 
             <div className="mt-5 flex flex-wrap gap-2.5">
             <div className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.055] px-3.5 py-2.5">
@@ -174,7 +183,7 @@ export function SiteFooter() {
 
         <div className="mt-5 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
           <p className="text-xs text-white/44">
-            {"\u00A9 INHERIX. Trademark Applied\u2122."}
+            {`\u00A9 ${currentYear} ${companyLegalName}. All rights reserved. Trademark Applied\u2122.`}
           </p>
           <div className="flex flex-wrap items-center gap-3">
             {["DPDP Act Aware", "IT Act 2000", "Controlled Preview Stage"].map((badge) => (
